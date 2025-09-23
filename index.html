@@ -34,8 +34,8 @@
         
         <main class="hero container" data-aos="fade-up" data-aos-delay="400">
             <h1 class="txtCTA">DESCUBRA ONDE TUDO COMEÇA <br>E TERMINA <div>ENCRUZILHADA</div></h1>
-            <p>Horário de funcionamento: 10:00 ás 22:00</p>
-            <a class="agendarHorario" href="#services">Veja o nosso cardápio</a>
+            <p>Horário de funcionamento: Sexta a Domingo - 14h às 19h</p>
+            <a class="agendarHorario" href="#cardapio">Veja o nosso cardápio</a>
         </main>
 
     </header>
@@ -58,69 +58,379 @@
 
     <!---SERVIÇOS-->
 
-    <section class="services" id="services" >
-        <div class="servicesContent container" data-aos="fade-up">
-            <h2>CARDÁPIO</h2>
-            <p>
-            Ingredientes selecionados, receitas com história e muito axé.
-            Cada bebida e prato celebra nossa cultura afro-brasileira.
-            Deguste a resistência, saboreie a celebração.</p>
+   <div class="container" id="cardapio" data-aos="fade-up">
+        <div class="header">
+            <h1>Cardápio</h1>
         </div>
 
-        <section class="produtos">
-            <div class="produtocaixa" data-aos="fade-up" data-aos-delay="100">
-                <img src="css/partials/img/EncruzaIMG/coxinhadebode.webp" alt="coxinhadebode">
-                    <h3>Coxinha de Bode</h3>
-                    <button>R$35,00</button>
+        <div class="tabs-container">
+            <div class="tabs">
+                <button class="tab-button active" onclick="showTab('drinks')">Drinks</button>
+                <button class="tab-button" onclick="showTab('petiscos')">Petiscos</button>
+                <button class="tab-button" onclick="showTab('outras-bebidas')">Outras Bebidas</button>
             </div>
-            <div class="produtocaixa" data-aos="fade-up" data-aos-delay="200">
-                <img src="css/partials/img/EncruzaIMG/bolinhodaencruzilhada.webp" alt="bolinhodaencruzilhada">
-                    <h3>Bolinho da Encruzilhada</h3>
-                    <button>R$35,00</button>
-            </div>
-            <div class="produtocaixa" data-aos="fade-up" data-aos-delay="300">
-                <img src="css/partials/img/EncruzaIMG/emincecomfritas.webp" alt="Emincecomfritas">
-                    <h3>Emince com Fritas</h3>
-                    <button>R$20,00</button>
-            </div>
-        </section>
+        </div>
 
-        <section class="produtos">
-            <div class="produtocaixa" data-aos="fade-up" data-aos-delay="100">
-                <img src="css/partials/img/EncruzaIMG/pastel.webp" alt="Pastel">
-                    <h3>Pastel de Queijo e Presunto</h3>
-                    <button>R$25,00</button>
-            </div>
-        </section>
+        <!-- Drinks Tab -->
+        <div id="drinks" class="tab-content active">
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="menu-item-image"></div>
+                    <div class="menu-item-content">
+                        <h3>Rosa menina</h3>
+                        <div class="menu-item-description">
+                            Drink especial da casa com ingredientes selecionados
+                        </div>
+                        <div class="price-options">
+                            <div class="price-option">
+                                <div>
+                                    <div class="price-label">Com cachaça</div>
+                                    <div class="price-sublabel">Versão com álcool</div>
+                                </div>
+                                <div class="price-value">R$ 15,00</div>
+                            </div>
+                            <div class="price-option">
+                                <div>
+                                    <div class="price-label">Sem Álcool</div>
+                                    <div class="price-sublabel">Versão sem álcool</div>
+                                </div>
+                                <div class="price-value">R$ 12,00</div>
+                            </div>
+                            <div class="price-option">
+                                <div>
+                                    <div class="price-label">Com vodka</div>
+                                </div>
+                                <div class="price-value">R$ 18,00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        <section class="produtos">
-            <div class="produtocaixa" data-aos="fade-up" data-aos-delay="100">
-                <img src="css/partials/img/EncruzaIMG/drink1.webp" alt="drink1">
-                    <h3>Encruzilhada</h3>
-                    <button>R$15,00</button>
+                <div class="menu-item">
+                    <div class="menu-item-image"></div>
+                    <div class="menu-item-content">
+                        <h3>Encruzilhada</h3>
+                        <div class="menu-item-description">
+                            Drink especial da casa com ingredientes selecionados
+                        </div>
+                        <div class="price-options">
+                            <div class="price-option">
+                                <div>
+                                    <div class="price-label">Com cachaça</div>
+                                    <div class="price-sublabel">Versão com álcool</div>
+                                </div>
+                                <div class="price-value">R$ 15,00</div>
+                            </div>
+                            <div class="price-option">
+                                <div>
+                                    <div class="price-label">Sem Álcool</div>
+                                    <div class="price-sublabel">Versão sem álcool</div>
+                                </div>
+                                <div class="price-value">R$ 12,00</div>
+                            </div>
+                            <div class="price-option">
+                                <div>
+                                    <div class="price-label">Com vodka</div>
+                                </div>
+                                <div class="price-value">R$ 18,00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image"></div>
+                    <div class="menu-item-content">
+                        <h3>Koori</h3>
+                        <div class="menu-item-description">
+                            Drink especial da casa com ingredientes selecionados
+                        </div>
+                        <div class="price-options">
+                            <div class="price-option">
+                                <div>
+                                    <div class="price-label">Com cachaça</div>
+                                    <div class="price-sublabel">Versão com álcool</div>
+                                </div>
+                                <div class="price-value">R$ 15,00</div>
+                            </div>
+                            <div class="price-option">
+                                <div>
+                                    <div class="price-label">Sem Álcool</div>
+                                    <div class="price-sublabel">Versão sem álcool</div>
+                                </div>
+                                <div class="price-value">R$ 12,00</div>
+                            </div>
+                            <div class="price-option">
+                                <div>
+                                    <div class="price-label">Com vodka</div>
+                                </div>
+                                <div class="price-value">R$ 18,00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="produtocaixa" data-aos="fade-up" data-aos-delay="200">
-                <img src="css/partials/img/EncruzaIMG/drink2.webp" alt="Drink2">
-                    <h3>Rosa Menina</h3>
-                    <button>R$12,00</button>
+        </div>
+
+        <!-- Petiscos Tab -->
+        <div id="petiscos" class="tab-content">
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="menu-item-image"></div>
+                    <div class="menu-item-content">
+                        <h3>Emincé de Mignon com Fritas</h3>
+                        <div class="menu-item-description">
+                            Porção de iscas de filé com batatas fritas e couve crispy
+                        </div>
+                        <div class="single-price">
+                            <div class="price-value">R$ 45,00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image"></div>
+                    <div class="menu-item-content">
+                        <h3>Emincé de Mignon com Adun</h3>
+                        <div class="menu-item-description">
+                            Porção de iscas de filé com Adun e couve crispy
+                        </div>
+                        <div class="single-price">
+                            <div class="price-value">R$ 45,00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image"></div>
+                    <div class="menu-item-content">
+                        <h3>Bolinho da Encruzilhada</h3>
+                        <div class="menu-item-description">
+                            Porção de bolinhos de linguiça Toscana acompanhados de geleia da casa com pimenta
+                        </div>
+                        <div class="single-price">
+                            <div class="price-value">R$ 35,00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image"></div>
+                    <div class="menu-item-content">
+                        <h3>Coxinha de Bode</h3>
+                        <div class="menu-item-description">
+                            Porção de coxinhas com recheio de costela desfiada e refogadas com catupiry
+                        </div>
+                        <div class="single-price">
+                            <div class="price-value">R$ 35,00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image"></div>
+                    <div class="menu-item-content">
+                        <h3>Ekuru com Ata Dindin</h3>
+                        <div class="menu-item-description">
+                            Porção de bolinho de feijão fradinho cozido no vapor com ragú de carne bovina inspirado com tempero típico yoruba
+                        </div>
+                        <div class="single-price">
+                            <div class="price-value">R$ 30,00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image"></div>
+                    <div class="menu-item-content">
+                        <h3>Menu Degustação</h3>
+                        <div class="menu-item-description">
+                            Prove todos os petiscos da casa
+                        </div>
+                        <div class="single-price">
+                            <div class="price-value">R$ 90,00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image"></div>
+                    <div class="menu-item-content">
+                        <h3>Pastel de queijo</h3>
+                        <div class="menu-item-description">
+                            Pastel Frito recheado com queijo
+                        </div>
+                        <div class="single-price">
+                            <div class="price-value">R$ 25,00</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="produtocaixa" data-aos="fade-up" data-aos-delay="300">
-                <img src="css/partials/img/EncruzaIMG/drink3.webp" alt="Drink3">
-                    <h3>Koori</h3>
-                    <button>R$12,00</button>
+        </div>
+
+        <!-- Outras Bebidas Tab -->
+        <div id="outras-bebidas" class="tab-content">
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="menu-item-image"></div>
+                    <div class="menu-item-content">
+                        <h3>Coca Cola</h3>
+                        <div class="menu-item-description">
+                            Refrigerante Coca Cola gelado
+                        </div>
+                        <div class="single-price">
+                            <div class="price-value">R$ 7,00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image"></div>
+                    <div class="menu-item-content">
+                        <h3>Coca Cola Zero</h3>
+                        <div class="menu-item-description">
+                            Refrigerante Coca Cola gelado
+                        </div>
+                        <div class="single-price">
+                            <div class="price-value">R$ 7,00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image"></div>
+                    <div class="menu-item-content">
+                        <h3>Fanta</h3>
+                        <div class="menu-item-description">
+                            Refrigerante Fanta gelado
+                        </div>
+                        <div class="single-price">
+                            <div class="price-value">R$ 7,00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image"></div>
+                    <div class="menu-item-content">
+                        <h3>Guaraná Antártica</h3>
+                        <div class="menu-item-description">
+                            Refrigerante Guaraná Antártica gelado
+                        </div>
+                        <div class="single-price">
+                            <div class="price-value">R$ 7,00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image"></div>
+                    <div class="menu-item-content">
+                        <h3>Guaraná Zero</h3>
+                        <div class="menu-item-description">
+                            Refrigerante Guaraná Antártica gelado
+                        </div>
+                        <div class="single-price">
+                            <div class="price-value">R$ 7,00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image"></div>
+                    <div class="menu-item-content">
+                        <h3>Água 350ml</h3>
+                        <div class="menu-item-description">
+                            Água mineral 350ml
+                        </div>
+                        <div class="single-price">
+                            <div class="price-value">R$ 5,00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image"></div>
+                    <div class="menu-item-content">
+                        <h3>Água com Gás 600ml</h3>
+                        <div class="menu-item-description">
+                            Água com gás 600ml
+                        </div>
+                        <div class="single-price">
+                            <div class="price-value">R$ 8,00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image"></div>
+                    <div class="menu-item-content">
+                        <h3>Água Tônica 350ml</h3>
+                        <div class="menu-item-description">
+                            Água tônica 350ml
+                        </div>
+                        <div class="single-price">
+                            <div class="price-value">R$ 7,00</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="menu-item">
+                    <div class="menu-item-image"></div>
+                    <div class="menu-item-content">
+                        <h3>Cerveja Amstel</h3>
+                        <div class="menu-item-description">
+                            Cerveja Amstel gelada
+                        </div>
+                        <div class="single-price">
+                            <div class="price-value">R$ 8,00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image"></div>
+                    <div class="menu-item-content">
+                        <h3>Cerveja Itaipava</h3>
+                        <div class="menu-item-description">
+                            Cerveja Itaipava gelada
+                        </div>
+                        <div class="single-price">
+                            <div class="price-value">R$ 6,00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image"></div>
+                    <div class="menu-item-content">
+                        <h3>Cerveja Heineken</h3>
+                        <div class="menu-item-description">
+                            Cerveja Heineken gelada
+                        </div>
+                        <div class="single-price">
+                            <div class="price-value">R$ 12,00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image"></div>
+                    <div class="menu-item-content">
+                        <h3>Cerveja Sem Glúten</h3>
+                        <div class="menu-item-description">
+                            Cerveja sem glúten gelada
+                        </div>
+                        <div class="single-price">
+                            <div class="price-value">R$ 15,00</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
-        <!-- Popup Modal -->
-<div class="popup-overlay" id="popupOverlay">
-    <div class="popup-content">
-        <button class="popup-close" onclick="closePopup()">&times;</button>
-        <h3 id="popupTitle">Título do Produto</h3>
-        <div class="popup-text">
-            <p id="popupDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
     </div>
-</div>
-    
+ 
 <!--FOOTER-->
     
 
@@ -138,14 +448,7 @@
                 <img src="css/partials/img/logos encruzinhada/Logos/tipografia_horizontal_branca.svg" alt="FooterLogo" >
             <p>© Bar Encruzilhada 2025. Todos os direitos reservados.</p>
     </footer>
-
-    <!---Botão whatsapp-->
-
-    <a href="https://wa.me/5592999999999?text=Olá,%20gostaria%20de%20agendar%20um%20horário" class="buttonwpp" target="_blank">
-        <img src="css/partials/img/whatssapp.svg" alt="buttonwpp">
-        <span class="popup">Agende seu horário</span>
-    </a>    
-
+    
     <script src="script.js"></script>
 </body>
 </html>

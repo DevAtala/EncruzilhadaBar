@@ -172,6 +172,17 @@ color: white;
   border-radius: 10px;
   font-weight: 500;
   transition: all 0.3s ease;
+  font-size: 20px;
+  animation: flutuante2 3s ease-in-out infinite;
+}
+
+@keyframes flutuante2 {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-7px);
+    }
 }
 
 .agendarHorario:hover{
@@ -303,103 +314,409 @@ color: white;
   }
 }
 
+
+
+
+
 /***************SERVIÇOS******************/
-.services{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-  color: #000000;
-}
-.servicesContent h2{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 50px;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  font-weight: 500;
-  color: black;
-  font-family: Krisha;
-}
-.servicesContent p{
-  font-size: 18px;
-  line-height: 150%;
-  margin: 30px 0px 100px 0px;
-  text-align: center;
-}
-
-.produtos{
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-bottom: 70px;
-}
 
 
-.produtocaixa{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0px 70px;
-  padding-bottom:30px;
-  border-radius: 20px;
-  background-color: #ffffff;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  transition: all 0.3s ease;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Bricolage Grotesque', sans-serif;
 }
 
-.produtocaixa img{
-  border-radius: 20px 20px 0 0;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+.header {
+    height: fit-content;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-.produtocaixa h3{
-  font-size: 18px;
-  font-weight: 500;
-  margin: 20px 0;
+.header h1 {
+    font-size: 50px;
+    color: var(--amareloNormal);
+    margin-bottom: 20px;
+    font-family: 'Krisha', sans-serif;
 }
 
-.produtocaixa button{
-  background-color: var(--amareloNormal);
-  color: #0f0f0f;
-  text-decoration: none;
-  border-radius: 20px;
-  font-weight: 500;
-  border: 0;
-  padding: 10px 50px;
-  font-size: 18px;
-  transition: all 0.3s ease;
+.tabs-container {
+    margin-bottom: 40px;
 }
 
-.produtocaixa:hover button{
-  transform: translateY(-2px) scale(105%);
-}
-.produtocaixa:hover{
-  transform: scale(105%); 
-  background-color: var(--amareloNormal);
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    border-bottom: 2px solid #ddd;
+    flex-wrap: wrap;
 }
 
-@media screen and (max-width: 768px){
-  
-  .produtos{
+.tab-button {
+    padding: 15px 30px;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--Branco);
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    flex: 1;
+    min-width: 120px;
+}
+
+.tab-button:hover {
+    background-color: rgba(233, 67, 25, 0.1);
+}
+
+.tab-button.active {
+    border-bottom-color: var(--roxoNormal);
+    color: var(--roxoNormal);
+    font-weight: bold;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.menu-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.menu-item-image {
+    width: 100%;
+    height: 313px;
+    background-color: #9a9a9a;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* DRINKS */
+#drinks .menu-item:nth-child(1) .menu-item-image {
+    background-image: url('partials/img/EncruzaIMG/drink2.webp');
+}
+
+#drinks .menu-item:nth-child(2) .menu-item-image {
+    background-image: url('partials/img/EncruzaIMG/drink1.webp');
+}
+
+#drinks .menu-item:nth-child(3) .menu-item-image {
+    background-image: url('partials/img/EncruzaIMG/drink3.webp');
+}
+
+/* PETISCOS */
+#petiscos .menu-item:nth-child(1) .menu-item-image {
+    background-image: url('partials/img/EncruzaIMG/emincecomfritas.webp');
+}
+
+#petiscos .menu-item:nth-child(2) .menu-item-image {
+    background-image: url('partials/img/EncruzaIMG/emincecomadun.webp');
+}
+
+#petiscos .menu-item:nth-child(3) .menu-item-image {
+    background-image: url('partials/img/EncruzaIMG/bolinhodaencruzilhada.webp');
+}
+
+#petiscos .menu-item:nth-child(4) .menu-item-image {
+    background-image: url('partials/img/EncruzaIMG/coxinhadebode.webp');
+}
+
+#petiscos .menu-item:nth-child(5) .menu-item-image {
+    background-image: url('partials/img/EncruzaIMG/Ekurucomatadindin.webp');
+}
+
+#petiscos .menu-item:nth-child(6) .menu-item-image {
+    background-image: url('partials/img/EncruzaIMG/menudesgustacao.webp');
+}
+
+#petiscos .menu-item:nth-child(7) .menu-item-image {
+    background-image: url('partials/img/EncruzaIMG/pastel.webp');
+}
+
+/* OUTRAS BEBIDAS */
+#outras-bebidas .menu-item:nth-child(1) .menu-item-image {
+    background-image: url('partials/img/EncruzaIMG/cocacola.webp');
+}
+
+#outras-bebidas .menu-item:nth-child(2) .menu-item-image {
+    background-image: url('partials/img/EncruzaIMG/cocacolazero.webp');
+}
+
+#outras-bebidas .menu-item:nth-child(3) .menu-item-image {
+    background-image: url('partials/img/EncruzaIMG/fantalaranja.webp');
+}
+
+#outras-bebidas .menu-item:nth-child(4) .menu-item-image {
+    background-image: url('partials/img/EncruzaIMG/guarana.webp');
+}
+
+#outras-bebidas .menu-item:nth-child(5) .menu-item-image {
+    background-image: url('partials/img/EncruzaIMG/guaranazero.webp');
+}
+
+#outras-bebidas .menu-item:nth-child(6) .menu-item-image {
+    background-image: url('partials/img/EncruzaIMG/agua350.webp');
+}
+
+#outras-bebidas .menu-item:nth-child(7) .menu-item-image {
+    background-image: url('partials/img/EncruzaIMG/aguacomgas600.webp');
+}
+
+#outras-bebidas .menu-item:nth-child(8) .menu-item-image {
+    background-image: url('partials/img/EncruzaIMG/aguatonica.webp');
+}
+
+#outras-bebidas .menu-item:nth-child(9) .menu-item-image {
+    background-image: url('partials/img/EncruzaIMG/amstellata.webp');
+}
+
+#outras-bebidas .menu-item:nth-child(10) .menu-item-image {
+    background-image: url('partials/img/EncruzaIMG/itaipavalata.webp');
+}
+
+#outras-bebidas .menu-item:nth-child(11) .menu-item-image {
+    background-image: url('partials/img/EncruzaIMG/heinekenlata.webp');
+}
+
+#outras-bebidas .menu-item:nth-child(12) .menu-item-image {
+    background-image: url('partials/img/EncruzaIMG/cervejasemgluten.webp');
+}
+
+.menu-item-content {
+    padding: 25px;
+}
+
+.menu-item h3 {
+    font-size: 1.4rem;
+    color: var(--marromNormal);
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.menu-item-description {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.price-options {
+    display: flex;
     flex-direction: column;
-  }
-  .produtocaixa{
-    margin: 30px 50px;
-    padding-bottom: 20px;
-  }
+    gap: 8px;
 }
+
+.price-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.price-option:last-child {
+    border-bottom: none;
+}
+
+.price-label {
+    font-weight: 600;
+    color: var(--marromNormal);
+    font-size: 0.95rem;
+}
+
+.price-sublabel {
+    font-size: 0.8rem;
+    color: #666;
+    font-weight: normal;
+}
+
+.price-value {
+    font-weight: bold;
+    color: var(--roxoNormal);
+    font-size: 1.1rem;
+}
+
+.single-price {
+    text-align: center;
+    padding: 15px 0;
+    border-top: 2px solid #eee;
+}
+
+.single-price .price-value {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--roxoNormal);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .menu-item-image {
+        height: 200px;
+    }
+
+    .tab-button {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+
+    .menu-item-content {
+        padding: 15px;
+    }
+
+    .menu-item h3 {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+
+    .menu-item-description {
+        font-size: 0.85rem;
+        margin-bottom: 15px;
+    }
+
+    .tabs {
+        justify-content: stretch;
+    }
+
+    .tab-button {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 3rem;
+    }
+
+    .menu-grid {
+        gap: 10px;
+    }
+
+    .menu-item-image {
+        height: 160px;
+    }
+
+    .menu-item-content {
+        padding: 12px;
+    }
+
+    .menu-item h3 {
+        font-size: 1rem;
+        margin-bottom: 6px;
+    }
+
+    .menu-item-description {
+        font-size: 0.8rem;
+        margin-bottom: 12px;
+        line-height: 1.4;
+    }
+
+    .tab-button {
+        padding: 10px 8px;
+        font-size: 0.85rem;
+    }
+
+    .price-option {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3px;
+        padding: 6px 0;
+    }
+
+    .price-label {
+        font-size: 0.85rem;
+    }
+
+    .price-sublabel {
+        font-size: 0.75rem;
+    }
+
+    .price-value {
+        align-self: flex-end;
+        font-size: 1rem;
+    }
+
+    .single-price .price-value {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .menu-item-image {
+        height: 140px;
+    }
+
+    .menu-item h3 {
+        font-size: 0.9rem;
+    }
+
+    .menu-item-description {
+        font-size: 0.75rem;
+    }
+
+    .price-label {
+        font-size: 0.8rem;
+    }
+
+    .price-sublabel {
+        font-size: 0.7rem;
+    }
+
+    .tab-button {
+        padding: 8px 6px;
+        font-size: 0.8rem;
+    }
+}
+
 
 /***************FOOTER******************/
 
 .footer h2{
   font-size: 50px;
   font-weight: 500;
-  color: black;
+  color: var(--amareloNormal);
   font-family: Krisha;
   text-align: center;
   width: 100%;
@@ -471,7 +788,7 @@ footer{
   .footer h2{
     font-size: 30px;
     padding: 20px 0px;
-    font-size: 35px;
+    font-size: 40px;
   }
   .footericones img{
     width: 200px;
@@ -483,126 +800,3 @@ footer{
     font-size: 10px;
   }
 }
-
-/*********/
-
-.buttonwpp{
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  z-index: 9999;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.buttonwpp:hover{
-  transform: scale(105%);
-}
-
-.popup{
-  position: absolute;
-  text-align: center;
-  width: 120px;
-  left: -130px;
-  visibility: hidden;
-  background-color: rgba(0, 0, 0, 0.39);
-  padding: 5px;
-  border-radius: 10px;
-  opacity: 0;
-  transition: all 0.2s ease;
-  font-weight: 200;
-}
-
-.buttonwpp:hover .popup{
-  visibility: visible;
-  transform: scale(105%);
-  opacity: 1;
-}
-
-/* Popup Styles */
-.popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(5px);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.popup-overlay.show {
-    opacity: 1;
-}
-
-.popup-content {
-    background: white;
-    border-radius: 20px;
-    padding: 30px;
-    max-width: 500px;
-    width: 90%;
-    position: relative;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    transform: scale(0);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.popup-overlay.show .popup-content {
-    transform: scale(1);
-}
-
-.popup-close {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    background: none;
-    border: none;
-    font-size: 30px;
-    color: #0f0f0f;
-    cursor: pointer;
-    font-weight: bold;
-    transition: transform 0.2s ease;
-}
-
-.popup-close:hover {
-    transform: scale(1.1);
-}
-
-.popup-content h3 {
-    color: #0f0f0f;
-    font-size: 24px;
-    margin-bottom: 20px;
-    text-align: center;
-    font-weight: 500;
-}
-
-
-
-@media screen and (max-width: 768px) {
-    .popup-content {
-        max-width: 90%;
-        height: 60vh;
-        display: flex;
-        flex-direction: column;
-        padding: 20px;
-    }
-    
-    .popup-text {
-        overflow-y: auto;
-        flex: 1;
-    }
-    
-}
-
-
