@@ -53,7 +53,7 @@ header {
 }
 
 .headerLogo img {
-  height: 150px;
+  height: 250px;
   transition: 0.5s ease;
   padding: 0.5rem;  
 }
@@ -351,6 +351,8 @@ color: white;
     gap: 0;
     border-bottom: 2px solid #ddd;
     flex-wrap: wrap;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .tab-button {
@@ -362,9 +364,10 @@ color: white;
     cursor: pointer;
     border-bottom: 3px solid transparent;
     transition: all 0.3s ease;
-    font-weight: 500;
-    flex: 1;
-    min-width: 120px;
+    font-weight: 400;
+    width: 50%;
+    min-width: 150px;
+    text-align: center;
 }
 
 .tab-button:hover {
@@ -393,7 +396,7 @@ color: white;
 
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 30px;
     padding: 20px 0;
 }
@@ -404,6 +407,7 @@ color: white;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 400px; 
 }
 
 .menu-item:hover {
@@ -500,15 +504,15 @@ color: white;
 }
 
 #outras-bebidas .menu-item:nth-child(10) .menu-item-image {
-    background-image: url('partials/img/EncruzaIMG/itaipavalata.webp');
-}
-
-#outras-bebidas .menu-item:nth-child(11) .menu-item-image {
     background-image: url('partials/img/EncruzaIMG/heinekenlata.webp');
 }
 
-#outras-bebidas .menu-item:nth-child(12) .menu-item-image {
+#outras-bebidas .menu-item:nth-child(11) .menu-item-image {
     background-image: url('partials/img/EncruzaIMG/cervejasemgluten.webp');
+}
+
+#refeicao .menu-item:nth-child(1) .menu-item-image {
+    background-image: url('partials/img/EncruzaIMG/feijoada.webp');
 }
 
 .menu-item-content {
@@ -615,13 +619,15 @@ color: white;
         margin-bottom: 15px;
     }
 
-    .tabs {
-        justify-content: stretch;
+        .tabs {
+        max-width: 100%;
     }
 
     .tab-button {
-        flex: 1;
-        text-align: center;
+        width: 50%;
+        padding: 10px 15px;
+        font-size: 0.9rem;
+        min-width: 120px;
     }
 }
 
